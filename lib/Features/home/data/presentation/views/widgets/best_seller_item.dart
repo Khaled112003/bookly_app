@@ -1,7 +1,7 @@
 import 'package:bookly/core/utilits/assets.dart';
-import 'package:flutter/cupertino.dart';
+
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
+
 
 import 'book_rating.dart';
 

@@ -1,9 +1,9 @@
+import 'package:bookly/Features/home/data/presentation/views/widgets/best_seller_listview.dart';
 import 'package:bookly/Features/home/data/presentation/views/widgets/books_listview.dart';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
-import 'best_seller_item.dart';
 import 'custom_appbar.dart';
 
 class homeViewBody extends StatelessWidget {
@@ -11,26 +11,39 @@ class homeViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Padding(
-      padding: EdgeInsets.only(
-        left: 20,
-      ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          customAppBar(),
-          booksListveiw(),
-          SizedBox(
-            height: 40,
+    return const CustomScrollView(
+      slivers: [
+        SliverToBoxAdapter(
+          child:  Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: 30, vertical: 20),
+                child: customAppBar(),
+              ),
+              booksListveiw(),
+              SizedBox(
+                height: 40,
+              ),
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: 30),
+                child: Text(
+                  'Best Seller',
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                ),
+              ),
+              SizedBox(
+                height: 30,
+              ),
+            ],
           ),
-          Text(
-            'Best Seller',
-            style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
-          ),
-          SizedBox(height: 30,),
-          BestSallerItem()
-        ],
-      ),
+        ),SliverFillRemaining(child:Padding(
+          padding: EdgeInsets.symmetric(horizontal: 30),
+          child: BestSellerListView(),
+        ) ,)
+
+      ],
     );
+    
   }
 }
