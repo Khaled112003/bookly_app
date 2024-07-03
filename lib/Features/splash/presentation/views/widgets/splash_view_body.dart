@@ -30,8 +30,9 @@ class _splashviewbodyState extends State<splashviewbody>
 
   @override
   void dispose() {
-    // TODO: implement dispose
+    
     animationController.dispose();
+    super.dispose();
   }
 
   Widget build(BuildContext context) {

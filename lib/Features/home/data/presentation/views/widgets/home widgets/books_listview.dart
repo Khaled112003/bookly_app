@@ -1,5 +1,7 @@
-import 'package:bookly/Features/home/data/presentation/views/widgets/custom_listviewitem.dart';
+
 import 'package:flutter/cupertino.dart';
+
+import 'custom_listviewitem.dart';
 
 class booksListveiw extends StatelessWidget {
   const booksListveiw({super.key});
@@ -10,8 +12,8 @@ class booksListveiw extends StatelessWidget {
       child: ListView.builder(
         scrollDirection: Axis.horizontal, 
         itemBuilder: (context, index) {
-        return Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 4),
+        return const Padding(
+          padding:  EdgeInsets.symmetric(horizontal: 4),
           child: customListviewItem(),
         );
       },),

@@ -2,11 +2,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
-import 'home widgets/best_seller_listview.dart';
-import 'home widgets/books_listview.dart';
-import 'home widgets/custom_appbar.dart';
-
-
+import 'best_seller_listview.dart';
+import 'books_listview.dart';
+import 'custom_appbar.dart';
 
 class homeViewBody extends StatelessWidget {
   const homeViewBody({super.key});
