@@ -1,7 +1,7 @@
 
 import 'package:flutter/cupertino.dart';
 
-import 'custom_listviewitem.dart';
+import 'Custom_Book_Item.dart';
 
 class booksListveiw extends StatelessWidget {
   const booksListveiw({super.key});
@@ -14,7 +14,7 @@ class booksListveiw extends StatelessWidget {
         itemBuilder: (context, index) {
         return const Padding(
           padding:  EdgeInsets.symmetric(horizontal: 4),
-          child: customListviewItem(),
+          child: CustomBookItem(),
         );
       },),
     );

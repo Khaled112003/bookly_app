@@ -1,14 +1,19 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
 
 class BookRating extends StatelessWidget {
-  const BookRating({super.key});
+  const BookRating({
+    Key? key,
+    this.mainAxisAlignment = MainAxisAlignment.start,
+  }) : super(key: key);
+
+  final MainAxisAlignment mainAxisAlignment;
 
   @override
   Widget build(BuildContext context) {
-    return const 
-    Row(
-      children: [
+    return Row(
+      mainAxisAlignment: mainAxisAlignment,
+      children:const [
         Icon(
           CupertinoIcons.star_fill,
           color: Colors.yellow,
