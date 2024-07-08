@@ -2,9 +2,7 @@ import 'package:bookly/Features/home/data/presentation/views/widgets/home%20deta
 import 'package:bookly/Features/home/data/presentation/views/widgets/home%20details%20widgets/book_listview.dart';
 import 'package:bookly/Features/home/data/presentation/views/widgets/home%20widgets/Custom_Book_Item.dart';
 import 'package:bookly/Features/home/data/presentation/views/widgets/home%20widgets/book_rating.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
 import 'book_details_appbar.dart';
 
 class BookDetails extends StatelessWidget {
@@ -15,9 +13,11 @@ class BookDetails extends StatelessWidget {
     var wid = MediaQuery.of(context).size.width;
     return SafeArea(
       child: Scaffold(
-        body: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 30),
-          child: SingleChildScrollView(
+          body: CustomScrollView(slivers: [
+        SliverFillRemaining(
+          hasScrollBody: false,
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 30),
             child: Column(
               children: [
                 const BookDetailsAppBar(),
@@ -58,8 +58,10 @@ class BookDetails extends StatelessWidget {
                   height: 30,
                 ),
                 const BookActions(),
-                const SizedBox(
-                  height: 50,
+                const Expanded(
+                  child: SizedBox(
+                    height: 50,
+                  ),
                 ),
                 const Padding(
                   padding: EdgeInsets.symmetric(horizontal: 8),
@@ -67,24 +69,24 @@ class BookDetails extends StatelessWidget {
                     children: [
                       Text(
                         'You can also like',
-                        style:
-                            TextStyle(fontSize: 15, fontWeight: FontWeight.w900),
+                        style: TextStyle(
+                            fontSize: 15, fontWeight: FontWeight.w900),
                       ),
                     ],
-                    
                   ),
-                  
                 ),
-                const
-                SizedBox(height: 16,),
-                BookListViewForBookDetails(),
-                SizedBox(height: 40,),
-            
+                const SizedBox(
+                  height: 16,
+                ),
+              const  BookListViewForBookDetails(),
+              const  SizedBox(
+                  height: 40,
+                ),
               ],
             ),
           ),
-        ),
-      ),
+        )
+      ])),
     );
   }
 }

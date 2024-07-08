@@ -1,6 +1,7 @@
 import 'package:bookly/core/utilits/assets.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class customAppBar extends StatelessWidget {
   const customAppBar({
@@ -14,7 +15,9 @@ class customAppBar extends StatelessWidget {
       child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Image.asset(assetsdata.logo,height: 22,),
-          IconButton(onPressed: () {}, icon: Icon(CupertinoIcons.search,size: 25,))
+          IconButton(onPressed: () {
+            GoRouter.of(context).go('/SearchBage');
+          }, icon: Icon(CupertinoIcons.search,size: 25,))
         ],
       ),
     );
