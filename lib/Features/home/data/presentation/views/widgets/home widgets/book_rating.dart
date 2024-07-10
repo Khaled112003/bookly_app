@@ -13,7 +13,7 @@ class BookRating extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       mainAxisAlignment: mainAxisAlignment,
-      children:const [
+      children: const [
         Icon(
           CupertinoIcons.star_fill,
           color: Colors.yellow,

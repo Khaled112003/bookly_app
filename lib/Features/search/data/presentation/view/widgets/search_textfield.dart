@@ -9,13 +9,10 @@ class SearchTextField extends StatelessWidget {
     return const SafeArea(
       child: TextField(
         decoration: InputDecoration(
-          suffixIcon: Icon(CupertinoIcons.search),
-          label: Text("search"),
-      
-      border: OutlineInputBorder(
-        borderSide: BorderSide(color: Colors.white)
-      )
-        ),
+            suffixIcon: Icon(CupertinoIcons.search),
+            label: Text("search"),
+            border: OutlineInputBorder(
+                borderSide: BorderSide(color: Colors.white))),
       ),
     );
   }

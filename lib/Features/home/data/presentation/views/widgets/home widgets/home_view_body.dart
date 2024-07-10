@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
@@ -14,7 +13,7 @@ class homeViewBody extends StatelessWidget {
     return const CustomScrollView(
       slivers: [
         SliverToBoxAdapter(
-          child:  Column(
+          child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Padding(
@@ -37,13 +36,14 @@ class homeViewBody extends StatelessWidget {
               ),
             ],
           ),
-        ),SliverFillRemaining(child:Padding(
-          padding: EdgeInsets.symmetric(horizontal: 30),
-          child: BestSellerListView(),
-        ) ,)
-
+        ),
+        SliverFillRemaining(
+          child: Padding(
+            padding: EdgeInsets.symmetric(horizontal: 30),
+            child: BestSellerListView(),
+          ),
+        )
       ],
     );
-    
   }
 }

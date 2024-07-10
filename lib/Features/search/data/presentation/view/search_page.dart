@@ -12,16 +12,25 @@ class SearchBage extends StatelessWidget {
     return const Scaffold(
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: 20),
-        child: Column(children: [
-          SearchTextField(),
-          SizedBox(height: 50,),
-          Align(alignment: Alignment.centerLeft,
-            child: Text(
-                    'Best Seller',
-                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),),
-          ),SizedBox(height: 20,),
-          BestSellerBooksSearch()
-        ],),
+        child: Column(
+          children: [
+            SearchTextField(),
+            SizedBox(
+              height: 50,
+            ),
+            Align(
+              alignment: Alignment.centerLeft,
+              child: Text(
+                'Best Seller',
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+              ),
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            BestSellerBooksSearch()
+          ],
+        ),
       ),
     );
   }

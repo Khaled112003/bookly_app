@@ -1,10 +1,8 @@
-
 import 'package:bookly/core/utilits/assets.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:go_router/go_router.dart';
-
 
 import 'sliding_text.dart';
 
@@ -26,11 +24,8 @@ class _splashviewbodyState extends State<splashviewbody>
     navigateToHomePage();
   }
 
-  
-
   @override
   void dispose() {
-    
     animationController.dispose();
     super.dispose();
   }
@@ -49,12 +44,9 @@ class _splashviewbodyState extends State<splashviewbody>
     );
   }
 
-
-
-  
   void navigateToHomePage() {
     Future.delayed(const Duration(seconds: 2), () {
-     context.go('/homepage');
+      context.go('/homepage');
     });
   }
 

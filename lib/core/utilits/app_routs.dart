@@ -8,19 +8,19 @@ final router = GoRouter(
   routes: [
     GoRoute(
       path: '/',
-      builder: (context, state) =>const splashview(),
+      builder: (context, state) => const splashview(),
     ),
     GoRoute(
       path: '/homepage',
-      builder: (context, state) =>const homePage(),
+      builder: (context, state) => const homePage(),
     ),
-     GoRoute(
+    GoRoute(
       path: '/bookdetails',
-      builder: (context, state) =>const BookDetails(),
+      builder: (context, state) => const BookDetails(),
     ),
     GoRoute(
       path: '/SearchBage',
-      builder: (context, state) =>const SearchBage(),
+      builder: (context, state) => const SearchBage(),
     ),
   ],
 );

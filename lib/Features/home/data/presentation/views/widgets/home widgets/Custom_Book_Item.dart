@@ -9,16 +9,12 @@ class CustomBookItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AspectRatio(
-      aspectRatio: 2/3.1,
+      aspectRatio: 2 / 3.1,
       child: Container(
-        
-        
-        decoration:const BoxDecoration(
+        decoration: const BoxDecoration(
           borderRadius: BorderRadius.all(Radius.circular(12)),
           color: Colors.red,
-          
           image: DecorationImage(
-            
             fit: BoxFit.fill,
             image: AssetImage(assetsdata.testImage),
           ),

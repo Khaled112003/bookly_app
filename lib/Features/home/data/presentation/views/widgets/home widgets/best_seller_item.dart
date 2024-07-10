@@ -3,7 +3,6 @@ import 'package:bookly/core/utilits/assets.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-
 import 'book_rating.dart';
 
 class BestSallerItem extends StatelessWidget {
@@ -11,9 +10,10 @@ class BestSallerItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(onTap: () {
-      context.go('/bookdetails');
-    },
+    return GestureDetector(
+      onTap: () {
+        context.go('/bookdetails');
+      },
       child: SizedBox(
         height: 150,
         child: Row(
@@ -34,7 +34,7 @@ class BestSallerItem extends StatelessWidget {
             const SizedBox(
               width: 30,
             ),
-          Expanded(
+            Expanded(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -59,15 +59,18 @@ class BestSallerItem extends StatelessWidget {
                   const SizedBox(
                     height: 3,
                   ),
-                   Row(
+                  Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                    const  Text(
+                      const Text(
                         "125€",
-                        style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                        style: TextStyle(
+                            fontSize: 20, fontWeight: FontWeight.bold),
                       ),
-                     const BookRating(),
-                      SizedBox(width:  MediaQuery.of(context).size.width * 0.0,)
+                      const BookRating(),
+                      SizedBox(
+                        width: MediaQuery.of(context).size.width * 0.0,
+                      )
                     ],
                   )
                 ],
@@ -79,4 +82,3 @@ class BestSallerItem extends StatelessWidget {
     );
   }
 }
-

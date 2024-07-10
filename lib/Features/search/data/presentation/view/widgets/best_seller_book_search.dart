@@ -8,16 +8,15 @@ class BestSellerBooksSearch extends StatelessWidget {
   Widget build(BuildContext context) {
     return Expanded(
       child: ListView.builder(
-        
         padding: EdgeInsets.zero,
         itemCount: 10,
         itemBuilder: (context, index) {
-        return const Padding(
-          padding:  EdgeInsets.symmetric(vertical: 10),
-          child: BestSallerItem(),
-        );
-      },),
+          return const Padding(
+            padding: EdgeInsets.symmetric(vertical: 10),
+            child: BestSallerItem(),
+          );
+        },
+      ),
     );
-        
-      }
   }
+}

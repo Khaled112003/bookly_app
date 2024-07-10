@@ -1,4 +1,3 @@
-
 import 'package:bookly/core/utilits/app_routs.dart';
 import 'package:flutter/material.dart';
 
@@ -14,15 +13,12 @@ class booklyapp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp.router(
-      routerConfig:router ,
+      routerConfig: router,
       debugShowCheckedModeBanner: false,
-      
-      theme: ThemeData.dark()
-          .copyWith(scaffoldBackgroundColor: Color.fromARGB(82, 60, 13, 131),
-          textTheme: GoogleFonts.montserratTextTheme(ThemeData.dark().textTheme)
-          ),
-          
-     
+      theme: ThemeData.dark().copyWith(
+          scaffoldBackgroundColor: Color.fromARGB(82, 60, 13, 131),
+          textTheme:
+              GoogleFonts.montserratTextTheme(ThemeData.dark().textTheme)),
     );
   }
 }
