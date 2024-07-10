@@ -6,18 +6,15 @@ class SearchTextField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Padding(
-      padding:  EdgeInsets.symmetric(horizontal: 20,),
-      child: SafeArea(
-        child: TextField(
-          decoration: InputDecoration(
-            suffixIcon: Icon(CupertinoIcons.search),
-            label: Text("search"),
-        
-        border: OutlineInputBorder(
-          borderSide: BorderSide(color: Colors.white)
-        )
-          ),
+    return const SafeArea(
+      child: TextField(
+        decoration: InputDecoration(
+          suffixIcon: Icon(CupertinoIcons.search),
+          label: Text("search"),
+      
+      border: OutlineInputBorder(
+        borderSide: BorderSide(color: Colors.white)
+      )
         ),
       ),
     );
