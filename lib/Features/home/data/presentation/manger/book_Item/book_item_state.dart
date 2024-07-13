@@ -12,10 +12,10 @@ final class BookItemLoding extends BookItemState {}
 final class BookItemFailure extends BookItemState {
 final String errormassage;
 
- const BookItemFailure({required this.errormassage});
+ const BookItemFailure( this.errormassage);
 }
 final class BookItemSuccses extends BookItemState {
  final List <BookModel> books;
 
- const BookItemSuccses({required this.books});
+ const BookItemSuccses( this.books);
 }
