@@ -1,4 +1,5 @@
 import 'package:bloc/bloc.dart';
+import 'package:bookly/Features/home/data/data/repos/home_repo.dart';
 import 'package:equatable/equatable.dart';
 
 import '../../../data/mobels/book_model/book_model.dart';
@@ -6,6 +7,15 @@ import '../../../data/mobels/book_model/book_model.dart';
 part 'book_item_state.dart';
 
 class BookItemCubit extends Cubit<BookItemState> {
-  BookItemCubit() : super(BookItemInitial());
-  
+  BookItemCubit(this.homeRepo) : super(BookItemInitial());
+  final HomeRepo homeRepo;
+  Future<void> fetchdata()async{
+    emit(BookItemLoding());
+    var result =await homeRepo.fetchBookItem();
+    result.fold((failure){
+      emit(BookItemFailure( failure.errorMassage));
+    }, (books) {
+      emit(BookItemSuccses( books));
+    });
+  }
 }
