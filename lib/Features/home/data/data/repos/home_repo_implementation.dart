@@ -7,35 +7,45 @@ import 'package:bookly/core/utilits/api_service.dart';
 import 'package:dartz/dartz.dart';
 import 'package:dio/dio.dart';
 
-class HomeRepoImplementation extends HomeRepo{
+class HomeRepoImplementation extends HomeRepo {
   final ApiService apiService;
 
-  HomeRepoImplementation( this.apiService);
+  HomeRepoImplementation(this.apiService);
   @override
-  Future<Either<Failure, List<BookModel>>> fetchBestSellerBook()async {
-    
-   try {
-  var data=await apiService.get(endpoint: 'volumes?Filtering=free-ebooks&q=programming');
-  
-  List<BookModel> books=[];
-  for (var element in data['items'] ) {
-   books.add(BookModel.fromJson(element));
-   
-    
-  }
-  return right(books);
-}   catch (e) {
-  if (e is DioException) {
- return left(ServerFailure.fromDioException(e));
-    
-  }
-  return left(ServerFailure(e.toString()));
-}
+  Future<Either<Failure, List<BookModel>>> fetchBestSellerBook() async {
+    try {
+      var data = await apiService.get(
+          endpoint: 'volumes?Filtering=free-ebooks&q=programming');
+
+      List<BookModel> books = [];
+      for (var element in data['items']) {
+        books.add(BookModel.fromJson(element));
+      }
+      return right(books);
+    } catch (e) {
+      if (e is DioException) {
+        return left(ServerFailure.fromDioException(e));
+      }
+      return left(ServerFailure(e.toString()));
+    }
   }
 
   @override
-  Future<Either<Failure, List<BookModel>>> fetchBookItem() {
-    // TODO: implement fetchBookItem
-    throw UnimplementedError();
+  Future<Either<Failure, List<BookModel>>> fetchBookItem() async {
+    try {
+      var data = await apiService.get(
+          endpoint: 'volumes?Filtering=free-ebooks&q=programming');
+
+      List<BookModel> books = [];
+      for (var element in data['items']) {
+        books.add(BookModel.fromJson(element));
+      }
+      return right(books);
+    } catch (e) {
+      if (e is DioException) {
+        return left(ServerFailure.fromDioException(e));
+      }
+      return left(ServerFailure(e.toString()));
+    }
   }
 }
