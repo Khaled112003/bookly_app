@@ -9,7 +9,7 @@ part 'book_item_state.dart';
 class BookItemCubit extends Cubit<BookItemState> {
   BookItemCubit(this.homeRepo) : super(BookItemInitial());
   final HomeRepo homeRepo;
-  Future<void> fetchdata()async{
+  Future<void> fetchBookItem()async{
     emit(BookItemLoding());
     var result =await homeRepo.fetchBookItem();
     result.fold((failure){

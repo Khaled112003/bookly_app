@@ -23,7 +23,10 @@ class BookDetails extends StatelessWidget {
                 const BookDetailsAppBar(),
                 Padding(
                   padding: EdgeInsets.symmetric(horizontal: wid * 0.18),
-                  child: const CustomBookItem(),
+                  child: const CustomBookItem(
+                    imageurl:
+                        'https://dfstudio-d420.kxcdn.com/wordpress/wp-content/uploads/2019/06/digital_camera_photo-1080x675.jpg',
+                  ),
                 ),
                 const SizedBox(
                   height: 30,
