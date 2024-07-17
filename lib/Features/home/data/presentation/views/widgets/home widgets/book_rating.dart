@@ -4,32 +4,34 @@ import 'package:flutter/cupertino.dart';
 class BookRating extends StatelessWidget {
   const BookRating({
     Key? key,
-    this.mainAxisAlignment = MainAxisAlignment.start,
+    this.mainAxisAlignment = MainAxisAlignment.start, required this.ratingcount, required this.avgcount,
   }) : super(key: key);
 
   final MainAxisAlignment mainAxisAlignment;
+  final int ratingcount ;
+  final dynamic avgcount ;
 
   @override
   Widget build(BuildContext context) {
-    return Row(
+    return  Row(
       mainAxisAlignment: mainAxisAlignment,
-      children: const [
-        Icon(
+      children:  [
+       const Icon(
           CupertinoIcons.star_fill,
           color: Colors.yellow,
         ),
-        SizedBox(
+        const SizedBox(
           width: 3,
         ),
-        Text(
-          '2.8',
+        Text(avgcount.toString(),
+          
           style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
         ),
-        SizedBox(
+       const SizedBox(
           width: 3,
         ),
         Text(
-          '(252)',
+         ("( ${ratingcount.toString()})"),
           style: TextStyle(fontSize: 14),
         )
       ],

@@ -1,5 +1,6 @@
+import 'package:bookly/Features/home/data/presentation/views/widgets/home%20details%20widgets/Book_ListView_BookDetails.dart';
 import 'package:bookly/Features/home/data/presentation/views/widgets/home%20details%20widgets/book_actions.dart';
-import 'package:bookly/Features/home/data/presentation/views/widgets/home%20details%20widgets/book_listview.dart';
+
 import 'package:bookly/Features/home/data/presentation/views/widgets/home%20widgets/Custom_Book_Item.dart';
 import 'package:bookly/Features/home/data/presentation/views/widgets/home%20widgets/book_rating.dart';
 import 'package:flutter/material.dart';
@@ -55,6 +56,7 @@ class BookDetails extends StatelessWidget {
                   height: 12,
                 ),
                 const BookRating(
+                  avgcount: 12,ratingcount: 2,
                   mainAxisAlignment: MainAxisAlignment.center,
                 ),
                 const SizedBox(

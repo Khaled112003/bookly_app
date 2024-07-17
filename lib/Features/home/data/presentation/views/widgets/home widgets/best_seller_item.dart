@@ -1,4 +1,5 @@
-import 'package:bookly/core/utilits/assets.dart';
+import 'package:bookly/Features/home/data/data/mobels/book_model/book_model.dart';
+import 'package:bookly/Features/home/data/presentation/views/widgets/home%20widgets/Custom_Book_Item.dart';
 
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
@@ -6,7 +7,8 @@ import 'package:go_router/go_router.dart';
 import 'book_rating.dart';
 
 class BestSallerItem extends StatelessWidget {
-  const BestSallerItem({super.key});
+  const BestSallerItem({super.key, required this.bookModel});
+  final BookModel bookModel;
 
   @override
   Widget build(BuildContext context) {
@@ -18,19 +20,7 @@ class BestSallerItem extends StatelessWidget {
         height: 150,
         child: Row(
           children: [
-            AspectRatio(
-              aspectRatio: 1 / 2,
-              child: Container(
-                decoration: const BoxDecoration(
-                  borderRadius: BorderRadius.all(Radius.circular(12)),
-                  color: Colors.red,
-                  image: DecorationImage(
-                    fit: BoxFit.fill,
-                    image: AssetImage(assetsdata.testImage),
-                  ),
-                ),
-              ),
-            ),
+            CustomBookItem(imageurl: bookModel.volumeInfo.imageLinks.thumbnail),
             const SizedBox(
               width: 30,
             ),
@@ -40,11 +30,11 @@ class BestSallerItem extends StatelessWidget {
                 children: [
                   SizedBox(
                       width: MediaQuery.of(context).size.width * 0.60,
-                      child: const Text(
-                        "harry potter and the global on fire ",
+                      child: Text(
+                        bookModel.volumeInfo.title!,
                         maxLines: 2,
                         overflow: TextOverflow.ellipsis,
-                        style: TextStyle(
+                        style: const TextStyle(
                             fontFamily: "Lumanosimo",
                             fontSize: 20,
                             fontWeight: FontWeight.w600),
@@ -52,9 +42,9 @@ class BestSallerItem extends StatelessWidget {
                   const SizedBox(
                     height: 3,
                   ),
-                  const Text(
-                    "khlaed",
-                    style: TextStyle(fontSize: 14),
+                  Text(
+                    bookModel.volumeInfo.authors![0],
+                    style: const TextStyle(fontSize: 14),
                   ),
                   const SizedBox(
                     height: 3,
@@ -63,11 +53,14 @@ class BestSallerItem extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       const Text(
-                        "125€",
+                        "Free",
                         style: TextStyle(
                             fontSize: 20, fontWeight: FontWeight.bold),
                       ),
-                      const BookRating(),
+                      BookRating(
+                        avgcount: bookModel.volumeInfo.averageRating ?? 0,
+                        ratingcount: bookModel.volumeInfo.ratingcount ?? 0,
+                      ),
                       SizedBox(
                         width: MediaQuery.of(context).size.width * 0.0,
                       )
