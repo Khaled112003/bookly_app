@@ -14,7 +14,7 @@ class BestSallerItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        context.go('/bookdetails');
+        context.go('/bookdetails', extra: bookModel);
       },
       child: SizedBox(
         height: 150,
