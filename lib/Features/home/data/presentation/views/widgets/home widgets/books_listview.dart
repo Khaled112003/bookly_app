@@ -3,11 +3,13 @@ import 'package:bookly/core/widgets/failure_error_massege.dart';
 import 'package:bookly/core/widgets/loading.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:go_router/go_router.dart';
 
 import 'Custom_Book_Item.dart';
 
 class booksListveiw extends StatelessWidget {
   const booksListveiw({super.key});
+  
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +24,9 @@ class booksListveiw extends StatelessWidget {
               itemBuilder: (context, index) {
                 return  Padding(
                   padding: EdgeInsets.symmetric(horizontal: 4),
-                  child: CustomBookItem( imageurl:  state.books[index].volumeInfo.imageLinks.thumbnail),
+                  child: GestureDetector(onTap: () {
+                    context.go('/bookdetails', extra: state.books[index]);
+                  }, child: CustomBookItem( imageurl:  state.books[index].volumeInfo.imageLinks.thumbnail)),
                 );
               },
             ),

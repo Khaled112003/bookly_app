@@ -25,7 +25,7 @@ class _BookDetailsState extends State<BookDetails> {
   Widget build(BuildContext context) {
     var wid = MediaQuery.of(context).size.width;
     return SafeArea(
-      child: Scaffold(body: BookDetailsBody(wid: wid)),
+      child: Scaffold(body: BookDetailsBody(wid: wid, bookModel:widget.bookModel ,)),
     );
   }
 }

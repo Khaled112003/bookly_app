@@ -1,3 +1,4 @@
+import 'package:bookly/Features/home/data/data/mobels/book_model/book_model.dart';
 import 'package:flutter/cupertino.dart';
 
 import '../home widgets/Custom_Book_Item.dart';
@@ -9,8 +10,9 @@ import 'book_details_appbar.dart';
 class BookDetailsBody extends StatelessWidget {
   const BookDetailsBody({
     super.key,
-    required this.wid,
+    required this.wid, required this.bookModel,
   });
+  final BookModel bookModel;
 
   final double wid;
 
@@ -26,17 +28,17 @@ class BookDetailsBody extends StatelessWidget {
           const BookDetailsAppBar(),
           Padding(
             padding: EdgeInsets.symmetric(horizontal: wid * 0.18),
-            child: const CustomBookItem(
-              imageurl:
-                  'https://dfstudio-d420.kxcdn.com/wordpress/wp-content/uploads/2019/06/digital_camera_photo-1080x675.jpg',
+            child:  CustomBookItem(
+              imageurl:bookModel.volumeInfo.imageLinks.thumbnail
+                  ,
             ),
           ),
           const SizedBox(
             height: 30,
           ),
-          const Text(
-            "the jugel book",
-            style: TextStyle(
+           Text(
+            bookModel.volumeInfo.title!,
+            style:const TextStyle(
                 fontFamily: "Lumanosimo",
                 fontSize: 30,
                 fontWeight: FontWeight.bold),
@@ -44,11 +46,12 @@ class BookDetailsBody extends StatelessWidget {
           const SizedBox(
             height: 3,
           ),
-          const Opacity(
+           Opacity(
             opacity: 0.6,
             child: Text(
-              "khaled mohaseb",
-              style: TextStyle(
+              textAlign: TextAlign.center,
+             bookModel.volumeInfo.authors![0],
+              style:const TextStyle(
                 fontFamily: "Lumanosimo",
                 fontSize: 14,
               ),
@@ -57,8 +60,9 @@ class BookDetailsBody extends StatelessWidget {
           const SizedBox(
             height: 12,
           ),
-          const BookRating(
-            avgcount: 12,ratingcount: 2,
+           BookRating(
+            avgcount:bookModel.volumeInfo.averageRating ?? 0,
+            ratingcount: bookModel.volumeInfo.ratingcount ?? 0,
             mainAxisAlignment: MainAxisAlignment.center,
           ),
           const SizedBox(
@@ -85,7 +89,7 @@ class BookDetailsBody extends StatelessWidget {
           const SizedBox(
             height: 16,
           ),
-          const BookListViewForBookDetails(),
+        const   BookListViewForBookDetails(),
           const SizedBox(
             height: 40,
           ),
