@@ -1,4 +1,4 @@
-import 'package:bookly/Features/home/data/data/mobels/book_model/book_model.dart';
+import 'package:bookly/core/book_model/book_model.dart';
 import 'package:bookly/Features/home/data/data/repos/home_repo_implementation.dart';
 import 'package:bookly/Features/home/data/presentation/manger/similarbookitem/fetchsimilairbookitem_cubit.dart';
 import 'package:bookly/Features/home/data/presentation/views/home.dart';

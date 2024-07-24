@@ -1,4 +1,4 @@
-import 'package:bookly/Features/home/data/data/mobels/book_model/book_model.dart';
+import 'package:bookly/core/book_model/book_model.dart';
 import 'package:flutter/cupertino.dart';
 
 import '../home widgets/Custom_Book_Item.dart';
@@ -68,7 +68,7 @@ class BookDetailsBody extends StatelessWidget {
           const SizedBox(
             height: 30,
           ),
-          const BookActions(),
+           BookActions( bookModel:bookModel ,),
           const Expanded(
             child: SizedBox(
               height: 50,

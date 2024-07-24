@@ -1,6 +1,6 @@
 // ignore_for_file: unused_local_variable
 
-import 'package:bookly/Features/home/data/data/mobels/book_model/book_model.dart';
+import 'package:bookly/core/book_model/book_model.dart';
 import 'package:bookly/Features/home/data/data/repos/home_repo.dart';
 import 'package:bookly/core/errors/failure.dart';
 import 'package:bookly/core/utilits/api_service.dart';
