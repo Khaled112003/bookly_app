@@ -1,8 +1,10 @@
-import 'package:bookly/Features/search/data/presentation/view/widgets/best_seller_book_search.dart';
-import 'package:bookly/Features/search/data/presentation/view/widgets/search_textfield.dart';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+
+import 'widgets/best_seller_book_search.dart';
+import 'widgets/search_textfield.dart';
 
 class SearchBage extends StatelessWidget {
   const SearchBage({super.key});
