@@ -7,5 +7,7 @@ abstract class SearchRepo{
     { required String searchPoint}
   );
 
-  void fold(Null Function(dynamic failure) param0, Null Function(dynamic books) param1) {}
+  
+
+  
 }

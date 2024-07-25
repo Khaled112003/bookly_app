@@ -10,7 +10,7 @@ class SearchbookCubit extends Cubit<SearchbookState> {
  final SearchRepo searchRepo;
  Future<void> fetchSearchBooks({required String searchPoint }) async {
     emit((Searchbookloading()));
-    var result = await searchRepo..searchbook(searchPoint: searchPoint);
+    var result = await searchRepo.searchbook(searchPoint: searchPoint);
     result.fold( (failure) {
       emit(Searchbookfailure (failure.errorMassage));
     }, (books) {
@@ -19,3 +19,7 @@ class SearchbookCubit extends Cubit<SearchbookState> {
   }
  
 }
+
+
+
+

@@ -9,12 +9,12 @@ import 'package:dio/dio.dart';
 class SearchRepoImplementation extends SearchRepo{
   final ApiService apiService;
 
-  SearchRepoImplementation({required this.apiService});
+  SearchRepoImplementation(this. apiService, );
   @override
   Future<Either<Failure, List<BookModel>>> searchbook(  { required String searchPoint}) async {
     try {
       var data = await apiService.get(
-          endpoint: 'volumes?Filtering=free-ebooks&q=programming');
+          endpoint: 'volumes?Filtering=free-ebooks&q=subject:$searchPoint');
 
       List<BookModel> books = [];
       for (var element in data['items']) {
