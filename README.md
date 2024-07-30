@@ -16,7 +16,7 @@ Bookly leverages MVVM architecture with BLoC (Business Logic Component) for effi
 
 Bookly is an evolving project with ongoing enhancements aimed at delivering an immersive reading experience. Future updates will focus on refining existing features and introducing new functionalities to further enrich the user experience.
 
-## Demo Video
+## Project photos
 
 <div align="center">
   
