@@ -19,6 +19,7 @@ Bookly is an evolving project with ongoing enhancements aimed at delivering an i
 ## Demo Video
 
 <div align="center">
+https://github.com/user-attachments/assets/8e81e167-5426-42b7-8fac-39e3b505ba88
 
 
 
