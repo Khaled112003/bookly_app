@@ -19,8 +19,19 @@ Bookly is an evolving project with ongoing enhancements aimed at delivering an i
 ## Demo Video
 
 <div align="center">
-https://github.com/user-attachments/assets/8e81e167-5426-42b7-8fac-39e3b505ba88
+![Screenshot_20240730-030803_Video Player.jpg](https://github.com/user-attachments/assets/8e81e167-5426-42b7-8fac-39e3b505ba88)
 
+![Screenshot_20240730-030811_Video Player.jpg](https://github.com/user-attachments/assets/297f4115-80e3-4237-af9e-0ce2c7676ed9)
+
+![Screenshot_20240730-030750_Video Player.jpg](https://github.com/user-attachments/assets/a15e6311-20b5-4702-b58e-2ec68627b732)
+
+![Screenshot_20240730-030817_Video Player.jpg](https://github.com/user-attachments/assets/4297f9b2-8a29-4d91-be6a-d87ce112e4f1)
+
+![Screenshot_20240730-030733_Video Player.jpg](https://github.com/user-attachments/assets/810406c9-3727-4794-ba0b-14bc8f90d06e)
+
+![Screenshot_20240730-030943_Video Player.jpg](https://github.com/user-attachments/assets/28b46ff6-a5be-4280-a112-24735f3c5afc)
+
+**
 
 
 </div>
